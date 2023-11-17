@@ -3,28 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        .myDIV {
-            display: none;
-            /* Set the initial display property to none */
-            width: 100%;
-            padding: 70px 0;
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        #div1 {
-            background-color: lightblue;
-        }
-        
-        #div2 {
-            background-color: lightgreen;
-        }
-        
-        #div3 {
-            background-color: lightcoral;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -38,7 +17,13 @@
     </div>
 
     <div id="div1" class="myDIV">
-        This is my DIV element 1.
+        <div id="text">
+            This is my DIV element 1. This side contains text.
+        </div>
+        <div id="image">
+            <!-- Insert your image here -->
+            <img src="https://stribny.name/images/blog/pytest/cover.png" alt="Image" width="85%" height="auto">
+        </div>
     </div>
 
     <div id="div2" class="myDIV">
@@ -52,14 +37,30 @@
     <p><b>Note:</b> The elements will not take up any space when the display property is set to "none".</p>
 
     <script>
-        function myFunction(divId) {
-            var x = document.getElementById(divId);
-            var computedStyle = window.getComputedStyle(x);
+        // Set the initial state to hide all divs
+        document.addEventListener("DOMContentLoaded", function () {
+            var allDivs = document.querySelectorAll('.myDIV');
+            allDivs.forEach(function (div) {
+                div.style.display = 'none';
+            });
+        });
 
-            if (computedStyle.display === "none") {
-                x.style.display = "block";
+        function myFunction(divId) {
+            var clickedDiv = document.getElementById(divId);
+            var allDivs = document.querySelectorAll('.myDIV');
+
+            allDivs.forEach(function (div) {
+                if (div !== clickedDiv) {
+                    div.style.display = 'none';
+                }
+            });
+
+            var computedStyle = window.getComputedStyle(clickedDiv);
+
+            if (computedStyle.display === 'none') {
+                clickedDiv.style.display = 'flex';
             } else {
-                x.style.display = "none";
+                clickedDiv.style.display = 'none';
             }
         }
     </script>

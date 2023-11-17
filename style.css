@@ -1,0 +1,35 @@
+.myDIV {
+    /* Remove the inline display: none; */
+    width: 100%;
+    padding: 70px 0;
+    text-align: center;
+    margin-top: 20px;
+    align-items: center; /* Align items in the center vertically */
+}
+
+#div1 {
+    background-color: #fff;
+    display: none; /* Set display to none initially */
+    flex: 1; /* Set flex to 1 to take remaining space */
+    justify-content: space-between; /* Space between text and image */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+#div2 {
+    background-color: lightgreen;
+    display: none; /* Set display to none initially */
+}
+
+#div3 {
+    background-color: lightcoral;
+    display: none; /* Set display to none initially */
+}
+
+#text {
+    flex: 1; /* Take remaining space */
+}
+
+#image {
+    flex: 1; /* Take remaining space */
+}
