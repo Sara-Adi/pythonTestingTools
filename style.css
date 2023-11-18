@@ -7,6 +7,11 @@ div2 {
     align-items: flex-start;
 }
 
+#div0 {
+    padding: 70px 0;
+    margin-top: 20px;
+}
+
 #div1 {
     padding: 70px 0;
     margin-top: 20px;
@@ -98,4 +103,21 @@ embed {
     width: 100%;
     height: 800px;
     /* Adjust the height as needed */
+}
+
+.module-code-brief h1 {
+    font-size: xx-large;
+}
+
+.download-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#div0 ul,
+ol {
+    list-style-type: square;
+    margin: 15px 0;
+    padding-left: 30px;
 }

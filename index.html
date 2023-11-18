@@ -14,9 +14,70 @@
 
     <div class="container">
         <div style="display: flex; justify-content: space-evenly; ">
+            <button class="btn btn-dark" onclick="myFunction('div0')">Code/Tools</button>
             <button class="btn btn-primary" onclick="myFunction('div1')">Pytest</button>
             <button class="btn btn-primary" style="background-color: #ff4d01  ; border-color: #ff4d01;" onclick="myFunction('div2')">Nose2</button>
             <button class="btn btn-primary" style="background-color: #F80000  ; border-color: #F80000;" onclick="myFunction('div3')">Unittest</button>
+        </div>
+
+        <div id="div0" class="myDIV">
+            <div class="row">
+
+                <div id="text" class="module-code-brief">
+                    <h1>Module Overview: Understanding the Code: <code>tic_tac_toe_ai.py</code></h1>
+
+                    <h3>1. Default Function:</h3>
+                    <p>- Prints a welcome message to initiate the Tic Tac Toe game.</p>
+
+                    <h3>2. Rules Function:</h3>
+                    <p>- Displays the layout of the Tic Tac Toe board with positions numbered from 1 to 9.</p>
+                    <p>- Informs players that they need to input a number (1-9) to make a move.</p>
+
+                    <h3>3. Display Board Function:</h3>
+                    <p>- Takes the current state of the Tic Tac Toe board and prints it, showing the positions and markers (X, O).</p>
+
+                    <h3>4. Computer AI Function (CompAI):</h3>
+                    <p>- Implements a basic AI for the computer player to make strategic moves.</p>
+                    <p>- Prioritizes winning moves, blocking opponent wins, choosing open corners, and selecting available edges.</p>
+                    <p>- Utilizes random selection for certain scenarios.</p>
+
+                    <h3>5. Select Random Function:</h3>
+                    <p>- Generates a random selection from a given list.</p>
+
+                    <h3>6. Place Marker Function:</h3>
+                    <p>- Places the marker (X or O) on the board at the specified position.</p>
+                    <p>- Checks if the position is valid (between 1 and 9).</p>
+
+                    <h3>7. Win Check Function:</h3>
+                    <p>- Checks if the current player has achieved a win based on various possible patterns on the board (horizontal, vertical, diagonal).</p>
+
+                    <h3>8. Full Board Check Function:</h3>
+                    <p>- Determines if the Tic Tac Toe board is full, indicating a draw.</p>
+
+                    <h3>9. Replay Function:</h3>
+                    <p>- Asks users if they want to play the game again.</p>
+                    <p>- Accepts input (Y/N) and returns <code>True</code> if the answer starts with 'Y'.</p>
+
+                    <h3>Main Program:</h3>
+                    <ul>
+                        <li>- Initiates the game loop, allowing continuous gameplay until the users decide to exit.</li>
+                        <li>- Sets up the game with initializations such as player names, marker choices (X and O), and starts the turn-by-turn gameplay.</li>
+                        <li>- Displays the game outcome, including the winner or a draw, and prompts users to replay.</li>
+                    </ul>
+
+                    <p><strong>Note:</strong></p>
+                    <ul>
+                        <li>- The game is currently set up to be played between two computer players (Computer1 and Computer2).</li>
+                        <li>- The logic allows for both players to make strategic moves, and the game continues until the players decide not to replay.</li>
+                    </ul>
+                </div>
+
+                <div style="justify-content: space-evenly; ">
+                    <a href="media/tic_tac_toe_ai.py" class="btn btn-success download-btn" download>View Python File</a>
+                </div>
+
+            </div>
+
         </div>
 
         <div id="div1" class="myDIV">
