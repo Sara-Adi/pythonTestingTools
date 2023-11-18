@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div id="text" style="margin-top: 3%;">
-
+                        <h1>Installation and Set Up</h1>
                         Ensure you have <a href="https://www.python.org/downloads/" target="_blank">python3</a> installed: <code style="color: #ff8ca7; font-size: 84.5%;">sudo apt install python3</code><br> Ensure you have <a href="https://pip.pypa.io/en/stable/installation/"
                             target="_blank">pip</a> installed: <code style="color: #ff8ca7; font-size: 84.5%;">sudo apt install python3-pip</code><br><br> Due to the Guelph linux servers being externally managed, a virtual enviornment on the sever is created
                         and worked in, in order to install and use pytest. To install a virtual environment type the following into the correct directory: <code style="color: #ff8ca7; font-size: 84.5%;">python3 -m venv myenv</code><br><br> In order to
@@ -45,159 +45,82 @@
             <hr>
 
             <div class="row">
-                
-                    <div id="text">
-                        Module Overview: Writing Pytest for the win_check Function
 
-                        In this module, we'll delve into the essentials of writing effective Pytest cases for the win_check function in a Tic Tac Toe game. The win_check function determines whether a player has won the game based on the current state of the game board.
+                <div id="text" class="module-test-brief">
+                    <h1>Module Overview: Writing Pytest for the <code>win_check</code> Function</h1>
 
-                        Key Concepts Covered:
+                    <p>In this module, we'll delve into the essentials of writing effective Pytest cases for the <code>win_check</code> function in a Tic Tac Toe game. The <code>win_check</code> function determines whether a player has won the game based
+                        on the current state of the game board.</p>
 
-                        Parameterized Testing:
+                    <h2>Key Concepts Covered:</h2>
 
-                        Learn how to use @pytest.mark.parametrize to run multiple test cases with different inputs on the win_check function, ensuring comprehensive test coverage.
-                        Test Case Structure:
+                    <ul>
+                        <li><strong>Parameterized Testing:</strong><br> Learn how to use <code>@pytest.mark.parametrize</code> to run multiple test cases with different inputs on the <code>win_check</code> function, ensuring comprehensive test coverage.</li>
 
-                        Understand the structure of a Pytest test case, including the use of the pytest.mark.parametrize decorator, which simplifies testing for various scenarios.
-                        Assertion in Pytest:
+                        <li><strong>Test Case Structure:</strong><br> Understand the structure of a Pytest test case, including the use of the <code>pytest.mark.parametrize</code> decorator, which simplifies testing for various scenarios.</li>
 
-                        Explore the assert keyword within Pytest, a fundamental tool for verifying that the win_check function returns the expected results for each test case.
-                        Expected Failures:
+                        <li><strong>Assertion in Pytest:</strong><br> Explore the <code>assert</code> keyword within Pytest, a fundamental tool for verifying that the <code>win_check</code> function returns the expected results for each test case.</li>
 
-                        Discover how to intentionally create a failing test case (as seen in Test Case 5), providing insights into the importance of accurate expected results.
-                        Interpreting Test Results:
+                        <li><strong>Expected Failures:</strong><br> Discover how to intentionally create a failing test case (as seen in Test Case 5), providing insights into the importance of accurate expected results.</li>
 
-                        Learn to interpret Pytest output, differentiating between passed and failed tests, and identifying the specific test cases that require attention.
-                        By the end of this module, you'll have a solid understanding of how to structure and execute Pytest cases, ensuring the reliability and accuracy of the win_check function in your Tic Tac Toe game.
-                    </div>
-                
+                        <li><strong>Interpreting Test Results:</strong><br> Learn to interpret Pytest output, differentiating between passed and failed tests, and identifying the specific test cases that require attention.</li>
+                    </ul>
 
-                
-                    <div id="image">
-                        <video width="100%" height="auto" style="border-radius: 10px;" controls>
+                    <p>By the end of this module, you'll have a solid understanding of how to structure and execute Pytest cases, ensuring the reliability and accuracy of the <code>win_check</code> function in your Tic Tac Toe game.</p>
+                </div>
+
+
+
+                <div id="image">
+                    <video width="100%" height="auto" style="border-radius: 10px;" controls>
                             <source src="media/sara-testing-4150.mp4" type="video/mp4">
                         </video>
-                    </div>
-                
+                </div>
+
             </div>
 
         </div>
 
 
-        <div id="div2" class="myDIV">
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="text" style="margin-top: 3%;">
-
-                        Ensure you have <a href="https://www.python.org/downloads/" target="_blank">python3</a> installed: <code style="color: #ff8ca7; font-size: 84.5%;">sudo apt install python3</code><br> Ensure you have pip installed: <code style="color: #ff8ca7; font-size: 84.5%;">sudo apt install python3-pip</code><br><br>                        Due to the Guelph linux servers being externally managed, a virtual enviornment on the sever is created and worked in, in order to install and use pytest. To install a virtual environment type the following into the correct directory:
-                        <code style="color: #ff8ca7; font-size: 84.5%;">python3 -m venv myenv</code><br><br> In order to activate the virtual environment, in order to allow you to work within a controlled environment where installed packages won't affect
-                        the system-wide Python installation, type: <code style="color: #ff8ca7; font-size: 84.5%;">source myenv/bin/activate</code><br><br> In order to install the Pytest framework inside the activated virtual environment, type:
-                        <code style="color: #ff8ca7; font-size: 84.5%;">pip install pytest</code><br><br> Once you are done developing or testing within the virtual environment, its good practice to deactivate the environment. Although this is optional,
-                        its highly recommended. To do so, type:
-                        <code style="color: #ff8ca7; font-size: 84.5%;">deactivate</code><br>
-
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="image">
-                        <img src="media/1.1.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px; margin-bottom: 5px;">
-                        <img src="media/1.2.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px; margin-bottom: 5px;">
-                        <img src="media/1.3.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px; margin-bottom: 5px;">
-                        <img src="media/1.4.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px; margin-bottom: 5px;">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="text">
-                        This is my DIV element 1. This side contains text.
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="image">
-                        <img src="media/1.1.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px;">
-                        <img src="media/1.2.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px;">
-                        <img src="media/1.3.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px;">
-                        <img src="media/1.4.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px;">
-                    </div>
-                </div>
-            </div>
-
+        <div id="div2" class="myDIV pdf-container">
+            <!-- Embed the PDF -->
+            <embed src="media/Lorem_ipsum.pdf" type="application/pdf" />
         </div>
 
 
-        <div id="div3" class="myDIV">
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="text" style="margin-top: 3%;">
-
-                        Ensure you have <a href="https://www.python.org/downloads/" target="_blank">python3</a> installed: <code style="color: #ff8ca7; font-size: 84.5%;">sudo apt install python3</code><br> Ensure you have pip installed: <code style="color: #ff8ca7; font-size: 84.5%;">sudo apt install python3-pip</code><br><br>                        Due to the Guelph linux servers being externally managed, a virtual enviornment on the sever is created and worked in, in order to install and use pytest. To install a virtual environment type the following into the correct directory:
-                        <code style="color: #ff8ca7; font-size: 84.5%;">python3 -m venv myenv</code><br><br> In order to activate the virtual environment, in order to allow you to work within a controlled environment where installed packages won't affect
-                        the system-wide Python installation, type: <code style="color: #ff8ca7; font-size: 84.5%;">source myenv/bin/activate</code><br><br> In order to install the Pytest framework inside the activated virtual environment, type:
-                        <code style="color: #ff8ca7; font-size: 84.5%;">pip install pytest</code><br><br> Once you are done developing or testing within the virtual environment, its good practice to deactivate the environment. Although this is optional,
-                        its highly recommended. To do so, type:
-                        <code style="color: #ff8ca7; font-size: 84.5%;">deactivate</code><br>
-
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="image">
-                        <img src="media/1.1.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px; margin-bottom: 5px;">
-                        <img src="media/1.2.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px; margin-bottom: 5px;">
-                        <img src="media/1.3.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px; margin-bottom: 5px;">
-                        <img src="media/1.4.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px; margin-bottom: 5px;">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="text">
-                        This is my DIV element 1. This side contains text.
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="image">
-                        <img src="media/1.1.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px;">
-                        <img src="media/1.2.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px;">
-                        <img src="media/1.3.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px;">
-                        <img src="media/1.4.gif" alt="Image" width="100%" height="auto" style="border-radius: 10px;">
-                    </div>
-                </div>
-            </div>
-
+        <div id="div3" class="myDIV pdf-container">
+            <!-- Embed the PDF -->
+            <embed src="media/Lorem_ipsum.pdf" type="application/pdf" />
         </div>
-    </div>
 
-    <script>
-        // Set the initial state to hide all divs
-        document.addEventListener("DOMContentLoaded", function() {
-            var allDivs = document.querySelectorAll('.myDIV');
-            allDivs.forEach(function(div) {
-                div.style.display = 'none';
-            });
-        });
-
-        function myFunction(divId) {
-            var clickedDiv = document.getElementById(divId);
-            var allDivs = document.querySelectorAll('.myDIV');
-
-            allDivs.forEach(function(div) {
-                if (div !== clickedDiv) {
+        <script>
+            // Set the initial state to hide all divs
+            document.addEventListener("DOMContentLoaded", function() {
+                var allDivs = document.querySelectorAll('.myDIV');
+                allDivs.forEach(function(div) {
                     div.style.display = 'none';
-                }
+                });
             });
 
-            var computedStyle = window.getComputedStyle(clickedDiv);
+            function myFunction(divId) {
+                var clickedDiv = document.getElementById(divId);
+                var allDivs = document.querySelectorAll('.myDIV');
 
-            if (computedStyle.display === 'none') {
-                clickedDiv.style.display = 'flex';
-            } else {
-                clickedDiv.style.display = 'none';
+                allDivs.forEach(function(div) {
+                    if (div !== clickedDiv) {
+                        div.style.display = 'none';
+                    }
+                });
+
+                var computedStyle = window.getComputedStyle(clickedDiv);
+
+                if (computedStyle.display === 'none') {
+                    clickedDiv.style.display = 'flex';
+                } else {
+                    clickedDiv.style.display = 'none';
+                }
             }
-        }
-    </script>
+        </script>
 
 </body>
 
