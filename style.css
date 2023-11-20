@@ -126,3 +126,14 @@ ol {
     width: 70%;
     height: 70%;
 }
+
+
+.module-basics-container{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.module-basics-heading{
+    font-size: 1.20rem;
+    margin-bottom: 1.4%;
+}

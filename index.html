@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Include highlight.js Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css">
+
+    <!-- Include highlight.js JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+
+    <!-- Include the Python language pack -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/python.min.js"></script>
+
+    <!-- Initialize highlight.js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -80,7 +97,7 @@
             <div class="row">
 
                 <div id="text" class="module-code-brief">
-                    <h1>Module Overview: Understanding the Code: <code>tic_tac_toe_ai.py</code></h1>
+                    <h1>Module Overview: Understanding the Code: <code style="color: #ff8ca7;">tic_tac_toe_ai.py</code></h1>
 
                     <h3>1. Default Function:</h3>
                     <p>- Prints a welcome message to initiate the Tic Tac Toe game.</p>
@@ -112,7 +129,7 @@
 
                     <h3>9. Replay Function:</h3>
                     <p>- Asks users if they want to play the game again.</p>
-                    <p>- Accepts input (Y/N) and returns <code>True</code> if the answer starts with 'Y'.</p>
+                    <p>- Accepts input (Y/N) and returns <code style="color: #ff8ca7;">True</code> if the answer starts with 'Y'.</p>
 
                     <h3>Main Program:</h3>
                     <ul>
@@ -155,16 +172,160 @@
             <hr>
             <hr>
 
+            <div class="module-basics">
+
+                
+                <h1>Basics of Pytest</h1>
+
+                <h5 class="module-basics-heading">Introduction to Pytest:</h5>
+
+                <div class="module-basics-container">
+                    <h6>What is <strong>Pytest?</strong></h6>
+                    <p>A Python testing framework designed for straightforward unit tests, featuring fixtures and parameterized testing capabilities.</p>
+    
+                    <h6><strong>Why</strong> should we use Pytest?</h6>
+                    <p>Simply because it is easy to use, helps manage test dependencies with fixtures, and offers built-in assertions for writing clear and effective test code. Not to mention, Pytest has one of the most active community support that makes it widely used in the Python world.</p>
+                </div>
+
+                <h5 class="module-basics-heading">Assertions and Test Outcomes:</h5>
+
+                <div class="module-basics-container">
+                    <h6>What are <strong>assertions?</strong></h6>
+                    <p><code style="color: #e377c2;">assert</code> in Python are statements used to check if a given condition is true, commonly used in testing to verify the conditions of a program. If the assertion fails, it will raise <code style="color: #ff0000;">AssertionError</code> providing a clear indication of the issue. For example, </p>
+
+                    <pre style="margin-bottom: 0px; margin: -2em 0px;">
+                        <code class="python" style="padding: 0em;">
+                            def test_addition():
+                            result = 2 + 2
+                            assert result == 4, "Addition failed"
+                        </code>
+                    </pre>
+
+                    <p>This test checks for the result of a simple addition operation, ensuring that it equals 4 and raising an assertion error with the message "Addition failed" if the condition is not met.</p>
+
+                    <h6>Overview of <strong>different assertions in Pytest</strong></h6>
+                    <p>There is a variety of assertions that you can use to check conditions and verify expectations in your tests. Here's an overview of some common assertions in Pytest:</p>
+
+                    <p><strong>Equality and Inequality:</strong></p>
+                    <pre style="margin-bottom: 0px; margin: -2em 0px;">
+                        <code class="python" style="padding: 0em;">
+                            assert a == b    # Asserts that a is equal to b
+                            assert a != b    # Asserts that a is not equal to b
+                        </code>
+                    </pre>
+
+                    <p><strong>Identity and Non-Identity:</strong></p>
+                    <pre style="margin-bottom: 0px; margin: -2em 0px;">
+                        <code class="python" style="padding: 0em;">
+                            assert a is b    # Asserts that a is the same object as b
+                            assert a is not b # Asserts that a is not the same object as b
+                        </code>
+                    </pre>
+
+                    <p><strong>Containment:</strong></p>
+                    <pre style="margin-bottom: 0px; margin: -2em 0px;">
+                        <code class="python" style="padding: 0em;">
+                            assert item in sequence    # Asserts that item is in the sequence
+                            assert item not in sequence # Asserts that item is not in the sequence
+                        </code>
+                    </pre>
+
+                    <p><strong>Greater and Less Than:</strong></p>
+                    <pre style="margin-bottom: 0px; margin: -2em 0px;">
+                        <code class="python" style="padding: 0em;">
+                            assert a > b   # Asserts that a is greater than b
+                            assert a < b   # Asserts that a is less than b
+                        </code>
+                    </pre>
+
+                    <p><strong>Greater/Less Than or Equal:</strong></p>
+                    <pre style="margin-bottom: 0px; margin: -2em 0px;">
+                        <code class="python" style="padding: 0em;">
+                            assert a >= b  # Asserts that a is greater than or equal to b
+                            assert a <= b  # Asserts that a is less than or equal to b
+                        </code>
+                    </pre>
+
+                    <h6 class="module-basics-heading" style="margin-top: 2%;">Understanding test outcomes <strong>(pass, fail, skip)</strong></h6>
+                    <p>In Pytest, test outcomes are categorized into three main statuses: pass, fail, and skip. These outcomes provide information about the results of the test cases:</p>
+
+                    <ul>
+                        <li><strong>Pass:</strong></li>
+                        <p>A test passes when all assertions within the test case are true, and there are no unhandled exceptions.</p>
+
+                        <li><strong>Fail:</strong></li>
+                        <p>A test fails when at least one assertion within the test case evaluates to false or if an unexpected exception occurs.
+                        </p>
+
+                        <li><strong>Skip:</strong></li>
+                        <p>A test is skipped when it is excluded from execution, usually due to some condition not being met (for instance, the environment is not suitable for the test).
+                        </p>
+                    </ul>
+
+                    <p><strong>Example of showcasing all outcomes</strong></p>
+                    <pre style="margin-bottom: 0px; margin: -2em 0px;">
+                        <code class="python" style="padding: 0em;">
+                            import pytest
+
+                            def test_pass():
+                                assert 1 + 1 == 2
+                            
+                            def test_fail():
+                                assert 1 + 1 == 3
+                            
+                            @pytest.mark.skip(reason="Test not applicable in this environment")
+                            def test_skip():
+                                assert True                            
+                        </code>
+                    </pre>
+
+                    <p>The <code style="color: #61aeee;">test_pass</code> function contains an assertion that is true, so the test will pass.</p>
+                    <p>The <code style="color: #61aeee;">test_fail</code> function contains an assertion that is false, so the test will fail.</p>
+                    <p>The <code style="color: #61aeee;">test_skip</code> function is marked with <code style="color: #61aeee;">@pytest.mark.skip</code> and will be skipped with the specified reason.</p>
+
+
+                    <h6 class="module-basics-heading" style="margin-top: 2%;"><strong>Parameterized</strong> Testing:</strong></h6>
+
+                    <p> In Pytest, parameterized testing uses the <code style="color: #61aeee;">@pytest.mark.parametrize</code> decorator, which allows developers to run the same test with different sets of input parameters. This helps improve test coverage and the effectiveness of test suites.</p>
+
+                    <pre style="margin-bottom: 0px; margin: -2em 0px;">
+                        <code class="python" style="padding: 0em;">
+                            import pytest
+                            from tic_tac_toe_ai import win_check
+                            
+                            @pytest.mark.parametrize("board, expected", [
+                                (["X", "O", "X", "O", "X", "O", "O", "X", "X"], True),
+                                (["O", "X", "O", "X", "O", "X", "X", "O", "O"], True),
+                                (["X", "X", "O", "O", "O", "X", "X", "O", "X"], False),
+                            ])
+                            def test_win_check(board, expected):
+                                result = win_check(board)
+                                assert result == expected                          
+                        </code>
+                    </pre>
+
+                    <p>In this case of parametrized testing with Pytest, the <code style="color: #61aeee;">test_win_check</code> function is systematically tested with different input scenarios (represented by the parameterized game boards), ensuring that the win_check function correctly evaluates whether a player has won the tic-tac-toe game. This approach improves test coverage and helps validate the functionality of the <code style="color: #61aeee;">win_check</code> function across various game configurations.</p>
+
+                    <br>
+    
+                </div>            
+
+            </div>
+
+            <hr>
+
             <div class="row">
 
                 <div id="text" class="module-test-brief">
-                    <h1>Module Overview: Writing Pytest for the <code>win_check</code> Function</h1>
+                    
+                    <h1>Module Overview: Writing Pytest for the <code >win_check</code> Function</h1>
 
                     <p>In this module, we'll delve into the essentials of writing effective Pytest cases for the <code>win_check</code> function in a Tic Tac Toe game. The <code>win_check</code> function determines whether a player has won the game based
                         on the current state of the game board.</p>
 
                     <h2>Key Concepts Covered:</h2>
-
+                    
+                    <div class="module-basics-container">
                     <ul>
                         <li><strong>Parameterized Testing:</strong><br> Learn how to use <code>@pytest.mark.parametrize</code> to run multiple test cases with different inputs on the <code>win_check</code> function, ensuring comprehensive test coverage.</li>
 
@@ -180,7 +341,7 @@
                     <p>By the end of this module, you'll have a solid understanding of how to structure and execute Pytest cases, ensuring the reliability and accuracy of the <code>win_check</code> function in your Tic Tac Toe game.</p>
                 </div>
 
-
+                </div>
 
                 <div id="image">
                     <video width="100%" height="auto" style="border-radius: 10px;" controls>
@@ -200,8 +361,10 @@
 
 
         <div id="div3" class="myDIV pdf-container">
-            <!-- Embed the PDF -->
-            <embed src="media/Lorem_ipsum.pdf" type="application/pdf" />
+            <!-- Embed the PDF using the object tag -->
+            <object data="media/Lorem_ipsum.pdf" type="application/pdf" width="100%" height="600px">
+                <p>This browser does not support PDFs. Please download the PDF to view it: <a href="media/Lorem_ipsum.pdf">Download PDF</a></p>
+            </object>
         </div>
 
         <script>
