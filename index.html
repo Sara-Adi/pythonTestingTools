@@ -87,16 +87,16 @@
 
     <div class="container">
         <div style="display: flex; justify-content: space-evenly; margin-bottom: 3%; ">
-            <button class="btn btn-dark" onclick="myFunction('div0')">Code/Tools</button>
-            <button class="btn btn-primary" onclick="myFunction('div1')">Pytest</button>
-            <button class="btn btn-primary" style="background-color: #ff4d01  ; border-color: #ff4d01;" onclick="myFunction('div2')">Nose2</button>
-            <button class="btn btn-primary" style="background-color: #F80000  ; border-color: #F80000;" onclick="myFunction('div3')">Unittest</button>
-            <button class="btn btn-dark" onclick="myFunction('div4')">Tool Comparison</button>
+            <button class="btn btn-dark" onclick="myFunction('div0'); scrollToElement('div0')">Code/Tools</button>
+            <button class="btn btn-primary" onclick="myFunction('div1'); scrollToElement('div1')">Pytest</button>
+            <button class="btn btn-primary" style="background-color: #ff4d01  ; border-color: #ff4d01;" onclick="myFunction('div2'); scrollToElement('div2')">Nose2</button>
+            <button class="btn btn-primary" style="background-color: #F80000  ; border-color: #F80000;" onclick="myFunction('div3'); scrollToElement('div3')">Unittest</button>
+            <button class="btn btn-dark" onclick="myFunction('div4'); scrollToElement('div4')">Tool Comparison</button>
         </div>
 
         <div id="div0" class="myDIV">
             <div class="row">
-
+            
                 <div id="text" class="module-code-brief">
                     <h1>Module Overview: Understanding the Code: <code style="color: #ff8ca7;">tic_tac_toe_ai.py</code></h1>
 
@@ -405,6 +405,14 @@
                     clickedDiv.style.display = 'flex';
                 } else {
                     clickedDiv.style.display = 'none';
+                }
+            }
+
+            function scrollToElement(elementId) {
+                var targetElement = document.getElementById(elementId);
+    
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
             }
         </script>
