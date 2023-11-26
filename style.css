@@ -1,4 +1,8 @@
 /* Additional styles for customization */
+.myDIV {
+    display: none;
+    transition: display 0.5s ease; /* Add transition for the display property */
+}
 
 .div2,
 div2 {
